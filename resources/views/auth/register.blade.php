@@ -85,13 +85,6 @@
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                 </div>
                             </div>
-                            {{-- <div class="mb-3 row" hidd>
-                                <label for="roles" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
-                                <div class="col-md-6">
-                                    <input id="roles" type="text" class="form-control" name="roles" value="subscribe" >
-                                    <input id="roles" type="text" class="form-control" name="roles" value="admin" readonly>
-                                </div>
-                            </div> --}}
 
                             <div class="mb-0 row">
                                 <div class="col-md-6 offset-md-4">
