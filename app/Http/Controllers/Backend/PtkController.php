@@ -74,6 +74,7 @@ class PtkController extends Controller
         ];
 
 
+         //upload image (cara kedua)
         if ($request->has('image')) {
             # upload with image
             $image = $request->file('image');

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index'])->name('root');
 Route::get('/kontak', [App\Http\Controllers\Frontend\FrontendController::class, 'contact'])->name('page.contact');
+Route::get('/ptk', [App\Http\Controllers\Frontend\PtkController::class, 'index'])->name('ptk.index');
 
 Route::prefix('page')->group(function () {
     Route::get('/detail/{slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'pagedetail'])->name('page.detail');

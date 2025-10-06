@@ -92,14 +92,14 @@
                                                     <span class="btn btn-outline-secondary btn-file">
                                                         <span class="fileinput-new">Select image</span>
                                                         <span class="fileinput-exists">Change</span>
-                                                        <input type="file" class="@error('imagehero') is-invalid @enderror"
-                                                        name="imagehero" value="{{ old('imagehero') }}"></span>
+                                                        <input type="file" class="@error('image') is-invalid @enderror"
+                                                        name="image" value="{{ old('image') }}"></span>
                                                         <a href="#" class="btn btn-outline-secondary fileinput-exists" data-dismiss="fileinput">
                                                             Remove
                                                         </a>
                                                     </div>
                                                 </div>
-                                                @error('imagehero')
+                                                @error('image')
                                                 <div class="invalid-feedback" style="display: block">
                                                     {{ $message }}
                                                 </div>

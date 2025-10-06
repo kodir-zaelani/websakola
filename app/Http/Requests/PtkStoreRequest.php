@@ -22,7 +22,7 @@ class PtkStoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'image' => 'image|mimes:jpeg,jpg,png,webp|max:1024',
+            'image' => 'image|mimes:jpeg,jpg,png,webp|max:2024',
             'name'      => 'required|min:2',
             'jabatan'   => 'required',
             'email'     => 'required|email|unique:ptk,email',
