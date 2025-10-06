@@ -68,7 +68,7 @@
 
                                 <div class="col-md-6">
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-                                    <small>Min 8 Caracter: Min 1 Uppercase, min 1 Symbol, min 1 Number </small>
+                                    <small class="text-muted fs-8">Min 8 Caracter: Min 1 Uppercase, min 1 Symbol, min 1 Number </small>
 
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
