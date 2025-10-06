@@ -73,7 +73,7 @@
                                                             <div class="box-header">
                                                                 <h4 class="box-title"> General
                                                                 </h4>
-                                                                
+
                                                             </div>
                                                             <div class="box-body">
                                                                 <div class="form-group">
@@ -149,7 +149,7 @@
                                                                                                     <label for="radio_static">Hero Static</label>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            
+
                                                                                             <div class="form-group">
                                                                                                 <label class="form-label">Description <span
                                                                                                     class="text-danger">*</span></label>
@@ -249,7 +249,7 @@
                                                                                                                     <span class="invalid-feedback"><strong>{{ $message }}</strong></span>
                                                                                                                     @enderror
                                                                                                                 </div>
-                                                                                                                
+
                                                                                                                 <div class="form-group">
                                                                                                                     <h5>Country </h5>
                                                                                                                     <div class="controls">
@@ -281,7 +281,7 @@
                                                                                                                             @enderror
                                                                                                                         </div>
                                                                                                                     </div>
-                                                                                                                    
+
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
@@ -523,10 +523,7 @@
                                                                                                                                         </h4>
                                                                                                                                     </div>
                                                                                                                                     <div class="box-body">
-                                                                                                                                        <iframe src="{{ $setting->maps }}" class="map" width="100%"
-                                                                                                                                            height="450" style="border:0;" allowfullscreen=""
-                                                                                                                                            loading="lazy"
-                                                                                                                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                                                                                                        {!! $setting->maps !!}
                                                                                                                                         </div>
                                                                                                                                     </div>
                                                                                                                                 </div>
@@ -584,7 +581,7 @@
                                                                                                                                                     </div>
                                                                                                                                                 </div>
                                                                                                                                             </div>
-                                                                                                                                            
+
                                                                                                                                         </div>
                                                                                                                                     </div>
                                                                                                                                 </div>
@@ -596,20 +593,20 @@
                                                                                                         </div>
                                                                                                     </form>
                                                                                                 </section>
-                                                                                                
+
                                                                                                 @push('styles')
                                                                                                 <!-- Jasny Bootstrap 4 -->
                                                                                                 <link rel="stylesheet"
                                                                                                 href="{{ asset('') }}assets/vendor_plugins/jasny-bootstrap/4.0.0/css/jasny-bootstrap.min.css">
                                                                                                 @endpush
-                                                                                                
+
                                                                                                 @push('scripts')
                                                                                                 <script src="{{ asset('') }}assets/vendor_plugins/jasny-bootstrap/4.0.0/js/jasny-bootstrap.min.js"></script>
                                                                                                 <script src="{{ asset('') }}assets/vendor_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
                                                                                                 <script src="{{ asset('') }}assets/vendor_components/select2/dist/js/select2.full.js"></script>
                                                                                                 <script src="{{ asset('') }}assets/vendor_components/ckeditor/ckeditor.js"></script>
                                                                                                 <script src="{{ asset('') }}assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
-                                                                                                
+
                                                                                                 <script>
                                                                                                     var options = {
                                                                                                         filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
@@ -622,7 +619,7 @@
                                                                                                     CKEDITOR.replace('editor1', options);
                                                                                                     //Initialize Select2 Elements
                                                                                                     $('.select2').select2();
-                                                                                                    
+
                                                                                                     //Save Draft
                                                                                                     $('#draft-btn').click(function(e) {
                                                                                                         e.preventDefault();
@@ -636,7 +633,7 @@
                                                                                                         $('#fresh_site').val(1);
                                                                                                         $('#post-form').submit();
                                                                                                     });
-                                                                                                    
+
                                                                                                     //flash message
                                                                                                     @if (session()->has('success'))
                                                                                                     swal("SUCCESS!", "{{ session('success') }}", "success");
@@ -677,4 +674,3 @@
                                                                                                 </script>
                                                                                                 @endpush
                                                                                                 @endsection
-                                                                                                

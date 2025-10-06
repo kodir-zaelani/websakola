@@ -17,7 +17,7 @@
         <div class="contact-main-wrapper">
             <div class="map-wrapper">
                 @if ($global_option <> '0')
-                <iframe src="{{ !empty($global_option->maps) ? $global_option->maps:'Silahkan Sesuaikan di halaman admin' }}" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                {!!$global_option->maps!!}
                 @endif
             </div>
 
