@@ -46,7 +46,7 @@ class RegisteredUserController extends Controller
         ]);
 
         //assign role to user
-        $user->syncRoles($request->input('roles'));
+        $user->syncRoles('admin');
 
         return redirect()->to('console-signin')->with(['success' => 'Sign Up ' . $user['name'] . ' was successfully!']);
 
