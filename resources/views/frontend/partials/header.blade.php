@@ -35,7 +35,9 @@
             <div class="social-links d-none d-md-flex align-items-center">
                 @if ($header_menu)
                 @foreach ($header_menu as $headermenu)
+                @if ($headermenu['status'] == 1)
                 <a href="{{ $headermenu['link'] }}" >{{ $headermenu['label']}}</a>
+                @endif
                 @endforeach
                 @endif
                 @if ($social_media)
@@ -65,17 +67,19 @@
                 <ul>
                     @if ($public_menu)
                     @foreach ($public_menu as $menu)
+                    @if ($menu['status'] == 1)
                     <li class="@if ($menu['child']) dropdown @endif">
                         <a href="{{ $menu['link'] }}" target="{{ $menu['target'] }}">
                             @if ($menu['child'])
                             <span>{{ $menu['label'] }}</span> <i class="bi bi-chevron-down toggle-dropdown"></i>
                             @else
-                            {{ $menu['label'] }}
+                            <span class="me-1">{!! $menu['icon'] !!}</span>{{ $menu['label'] }}
                             @endif
                         </a>
                         @if ($menu['child'])
                         <ul>
                             @foreach ($menu['child'] as $child)
+                            @if ($child['status'] == 1)
                             <li @if ($child['child']) class="dropdown" @endif>
                                 <a href="{{ $child['link'] }}" target="{{ $child['target'] }}">
                                     @if ($child['child'])
@@ -87,6 +91,7 @@
                                 @if ($child['child'])
                                 <ul>
                                     @foreach ($child['child'] as $subchild)
+                                    @if ($subchild['status'] == 1)
                                     <li @if ($subchild['child']) class="dropdown" @endif>
                                         <a href="{{ $subchild['link'] }}" target="{{ $subchild['target'] }}">
                                             @if ($subchild['child'])
@@ -98,23 +103,28 @@
                                         @if ($subchild['child'])
                                         <ul>
                                             @foreach ($subchild['child'] as $subchilddeep)
+                                            @if ($subchilddeep['status'] == 1)
                                             <li>
                                                 <a href="{{ $subchilddeep['link'] }}" target="{{ $subchilddeep['target'] }}">
                                                     {{ $subchilddeep['label'] }}
                                                 </a>
                                             </li>
+                                            @endif
                                             @endforeach
                                         </ul>
                                         @endif
                                     </li>
+                                    @endif
                                     @endforeach
                                 </ul>
                                 @endif
                             </li>
+                            @endif
                             @endforeach
                         </ul>
                         @endif
                     </li>
+                    @endif
                     @endforeach
                     @endif
                 </ul>

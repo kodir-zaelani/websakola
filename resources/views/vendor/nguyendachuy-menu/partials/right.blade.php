@@ -55,14 +55,23 @@
     @endif
     @if(request()->get('menu') != 0)
     <div class="card-footer">
-        <button type="button" class="btn btn-danger btn-sm submitdelete deletion menu-delete"
-        onclick="deleteMenu()" href="javascript:void(9)">Delete Menu
-    </button>
-    @if(isset($menus) && count($menus) > 0)
-    <button type="button" class="btn btn-info btn-sm"
-    onclick="updateItem()" href="javascript:void(9)">Update All Item
-</button>
-@endif
+        <div class="row">
+            <div class="col-6">
+                @if(isset($menus) && count($menus) > 0)
+                <button type="button" class="btn btn-info btn-sm"
+                onclick="updateItem()" href="javascript:void(9)">Update All Item
+            </button>
+            @endif
+        </div>
+        <div class="col-6 text-end">
+            <button type="button" class="btn btn-danger btn-sm submitdelete deletion menu-delete"
+            onclick="deleteMenu()" href="javascript:void(9)">Delete Menu
+        </button>
+    </div>
+</div>
+
+
+
 </div>
 @endif
 </div>

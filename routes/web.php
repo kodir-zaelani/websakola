@@ -34,7 +34,6 @@ Route::get('berita/tag/{slug}',  [App\Http\Controllers\Frontend\PostController::
 // Route::get('berita-tag/{slug}', App\Livewire\Frontend\Post\Tags::class)->name('post.tag');
 
 Route::middleware(['auth', 'verified', 'web'])->group(function () {
-    Route::get('/menu', [App\Http\Controllers\Backend\MenuController::class, 'menu'])->name('menu');
     Route::get('/backend/menu', [App\Http\Controllers\Backend\MenuController::class, 'index'])->name('backend.menu.index');
 
     // Dashboard

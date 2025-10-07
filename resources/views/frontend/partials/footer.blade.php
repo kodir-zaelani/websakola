@@ -33,7 +33,9 @@
                 <ul>
                     @if ($bottom_left)
                     @foreach ($bottom_left as $bottomleft)
+                    @if ($bottomleft['status'] == 1)
                     <li><a href="{{ $bottomleft['link'] }}" target="{{ $bottomleft['target'] }}">{{ $bottomleft['label']}}</a></li>
+                    @endif
                     @endforeach
                     @endif
                 </ul>
@@ -44,7 +46,9 @@
                 <ul>
                     @if ($bottom_middle)
                     @foreach ($bottom_middle as $bottommiddle)
+                    @if ($bottommiddle['status'] == 1)
                     <li><a href="{{ $bottommiddle['link'] }}" target="{{ $bottommiddle['target'] }}">{{ $bottommiddle['label']}}</a></li>
+                    @endif
                     @endforeach
                     @endif
                 </ul>
@@ -55,7 +59,9 @@
                 <ul>
                     @if ($bottom_right)
                     @foreach ($bottom_right as $bottomright)
+                    @if ($bottomright['status'] == 1)
                     <li><a href="{{ $bottomright['link'] }}" target="{{ $bottomright['target'] }}">{{ $bottomright['label']}}</a></li>
+                    @endif
                     @endforeach
                     @endif
                 </ul>

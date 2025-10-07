@@ -1,5 +1,6 @@
 /**
  * load loading
+ * load loading
  */
 $(document).ajaxStart(function () {
     $("#ajax_loader").show();

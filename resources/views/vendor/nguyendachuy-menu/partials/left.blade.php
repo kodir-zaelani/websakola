@@ -30,6 +30,24 @@
     'urls' => $categories,
     ])
 
+    @php
+    $static = [
+    [
+    'url' => '/kontak',
+    'icon' => '',
+    'label' => 'Kontak',
+    ],
+    [
+    'url' => '/ptk',
+    'icon' => '',
+    'label' => 'PTK',
+    ]
+    ];
+    @endphp
+    @include('nguyendachuy-menu::accordions.default', [
+    'name' => 'Static',
+    'urls' => $static,
+    ])
     @include('nguyendachuy-menu::accordions.add-link', ['name' => 'Custom Link'])
 
 </div>

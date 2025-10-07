@@ -30,8 +30,10 @@ $id = rand(100000, 999999);
                 <div class="form-group">
                     <label for="icon">Enter Icon</label>
                     <input type="text" class="form-control" id="iconHelp" name="icon" placeholder="Icon">
-                    <small id="iconHelp" class="form-text text-muted">
-                        Ex: &lt;span class=&quot;oi oi-align-center&quot;&gt;&lt;/span&gt;
+                    <small>
+                        <a href="https://icons.getbootstrap.com/" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-bootstrap"></i> Select Icon Bootsrap
+                        </a>
                     </small>
                 </div>
                 @if(!empty($roles))

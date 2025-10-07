@@ -2,7 +2,8 @@
 	$currentUrl = url()->current();
 @endphp
 
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+{{-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> --}}
+<link href="{{asset('')}}assets/icons/font-awesome/css/font-awesome.css" rel="stylesheet">
 {{-- <link href="{{asset('vendor/nguyendachuy-menu/style.css')}}" rel="stylesheet"> --}}
 
 <div id="nguyen-huy" class="mt-2 mb-2 card">

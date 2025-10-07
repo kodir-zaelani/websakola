@@ -45,9 +45,7 @@
                             </button>
                         </div>
                     </div>
-                    <!-- /.box-header -->
                     <div class="box-body">
-                        <!-- Nav tabs -->
                         <ul class="nav nav-tabs customtab2" role="tablist">
                             <li class="nav-item"> <a class="nav-link active" data-bs-toggle="tab" href="#home7"
                                 role="tab"><span class="hidden-sm-up"><i class="ion-home"></i></span> <span
@@ -65,7 +63,6 @@
                                                 role="tab"><span class="hidden-sm-up"><i class="ion-email"></i></span> <span
                                                 class="hidden-xs-down">Meta Descriptions</span></a> </li>
                                             </ul>
-                                            <!-- Tab panes -->
                                             <div class="tab-content">
                                                 <div class="tab-pane active" id="home7" role="tabpanel">
                                                     <div class="p-15">
@@ -524,26 +521,47 @@
                                                                                                                                     </div>
                                                                                                                                     <div class="box-body">
                                                                                                                                         {!! $setting->maps !!}
-                                                                                                                                        </div>
                                                                                                                                     </div>
                                                                                                                                 </div>
                                                                                                                             </div>
                                                                                                                         </div>
-                                                                                                                        <div class="tab-pane" id="meta9" role="tabpanel">
-                                                                                                                            <div class="p-15">
-                                                                                                                                <div class="row">
-                                                                                                                                    <div class="box">
-                                                                                                                                        <div class="box-header">
-                                                                                                                                            <h4 class="box-title">
-                                                                                                                                                Meta Descriptions & Meta Keywords
-                                                                                                                                            </h4>
+                                                                                                                    </div>
+                                                                                                                    <div class="tab-pane" id="meta9" role="tabpanel">
+                                                                                                                        <div class="p-15">
+                                                                                                                            <div class="row">
+                                                                                                                                <div class="box">
+                                                                                                                                    <div class="box-header">
+                                                                                                                                        <h4 class="box-title">
+                                                                                                                                            Meta Descriptions & Meta Keywords
+                                                                                                                                        </h4>
+                                                                                                                                    </div>
+                                                                                                                                    <div class="box-body">
+                                                                                                                                        <div class="form-group">
+                                                                                                                                            <h5>Meta Descriptions </h5>
+                                                                                                                                            <div class="controls">
+                                                                                                                                                <textarea rows="2" name="meta_description"
+                                                                                                                                                class="form-control @error('meta_description') is-invalid @enderror" placeholder="meta_description">{{ old('meta_description') ?? $setting->meta_description }} </textarea>
+                                                                                                                                            </div>
+                                                                                                                                            <div class="form-control-feedback">
+                                                                                                                                                <small> Exp:
+                                                                                                                                                    <code>
+                                                                                                                                                        Digital Nusantara, Digital Nusantara Borneo, Borneo,
+                                                                                                                                                        Digital, Nusantara, Kaltim
+                                                                                                                                                    </code>
+                                                                                                                                                </small>
+                                                                                                                                            </div>
+                                                                                                                                            @error('meta_description')
+                                                                                                                                            <div class="form-control-feedback"><small>
+                                                                                                                                                <code>{{ $message }}</code> </small></div>
+                                                                                                                                                @enderror
+                                                                                                                                            </div>
                                                                                                                                         </div>
                                                                                                                                         <div class="box-body">
                                                                                                                                             <div class="form-group">
-                                                                                                                                                <h5>Meta Descriptions </h5>
+                                                                                                                                                <h5>Meta Keywords </h5>
                                                                                                                                                 <div class="controls">
-                                                                                                                                                    <textarea rows="2" name="meta_description"
-                                                                                                                                                    class="form-control @error('meta_description') is-invalid @enderror" placeholder="meta_description">{{ old('meta_description') ?? $setting->meta_description }} </textarea>
+                                                                                                                                                    <textarea rows="2" name="meta_keywords" class="form-control @error('meta_keywords') is-invalid @enderror"
+                                                                                                                                                    placeholder="meta_keywords">{{ old('meta_keywords') ?? $setting->meta_keywords }} </textarea>
                                                                                                                                                 </div>
                                                                                                                                                 <div class="form-control-feedback">
                                                                                                                                                     <small> Exp:
@@ -553,36 +571,14 @@
                                                                                                                                                         </code>
                                                                                                                                                     </small>
                                                                                                                                                 </div>
-                                                                                                                                                @error('meta_description')
+                                                                                                                                                @error('meta_keywords')
                                                                                                                                                 <div class="form-control-feedback"><small>
                                                                                                                                                     <code>{{ $message }}</code> </small></div>
                                                                                                                                                     @enderror
                                                                                                                                                 </div>
                                                                                                                                             </div>
-                                                                                                                                            <div class="box-body">
-                                                                                                                                                <div class="form-group">
-                                                                                                                                                    <h5>Meta Keywords </h5>
-                                                                                                                                                    <div class="controls">
-                                                                                                                                                        <textarea rows="2" name="meta_keywords" class="form-control @error('meta_keywords') is-invalid @enderror"
-                                                                                                                                                        placeholder="meta_keywords">{{ old('meta_keywords') ?? $setting->meta_keywords }} </textarea>
-                                                                                                                                                    </div>
-                                                                                                                                                    <div class="form-control-feedback">
-                                                                                                                                                        <small> Exp:
-                                                                                                                                                            <code>
-                                                                                                                                                                Digital Nusantara, Digital Nusantara Borneo, Borneo,
-                                                                                                                                                                Digital, Nusantara, Kaltim
-                                                                                                                                                            </code>
-                                                                                                                                                        </small>
-                                                                                                                                                    </div>
-                                                                                                                                                    @error('meta_keywords')
-                                                                                                                                                    <div class="form-control-feedback"><small>
-                                                                                                                                                        <code>{{ $message }}</code> </small></div>
-                                                                                                                                                        @enderror
-                                                                                                                                                    </div>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-
                                                                                                                                         </div>
+
                                                                                                                                     </div>
                                                                                                                                 </div>
                                                                                                                             </div>
@@ -591,86 +587,86 @@
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
-                                                                                                    </form>
-                                                                                                </section>
+                                                                                                    </div>
+                                                                                                </form>
+                                                                                            </section>
 
-                                                                                                @push('styles')
-                                                                                                <!-- Jasny Bootstrap 4 -->
-                                                                                                <link rel="stylesheet"
-                                                                                                href="{{ asset('') }}assets/vendor_plugins/jasny-bootstrap/4.0.0/css/jasny-bootstrap.min.css">
-                                                                                                @endpush
+                                                                                            @push('styles')
+                                                                                            <link rel="stylesheet"
+                                                                                            href="{{ asset('') }}assets/vendor_plugins/jasny-bootstrap/4.0.0/css/jasny-bootstrap.min.css">
+                                                                                            @endpush
 
-                                                                                                @push('scripts')
-                                                                                                <script src="{{ asset('') }}assets/vendor_plugins/jasny-bootstrap/4.0.0/js/jasny-bootstrap.min.js"></script>
-                                                                                                <script src="{{ asset('') }}assets/vendor_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
-                                                                                                <script src="{{ asset('') }}assets/vendor_components/select2/dist/js/select2.full.js"></script>
-                                                                                                <script src="{{ asset('') }}assets/vendor_components/ckeditor/ckeditor.js"></script>
-                                                                                                <script src="{{ asset('') }}assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
+                                                                                            @push('scripts')
+                                                                                            <script src="{{ asset('') }}assets/vendor_plugins/jasny-bootstrap/4.0.0/js/jasny-bootstrap.min.js"></script>
+                                                                                            <script src="{{ asset('') }}assets/vendor_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+                                                                                            <script src="{{ asset('') }}assets/vendor_components/select2/dist/js/select2.full.js"></script>
+                                                                                            <script src="{{ asset('') }}assets/vendor_components/ckeditor/ckeditor.js"></script>
+                                                                                            <script src="{{ asset('') }}assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js"></script>
 
-                                                                                                <script>
-                                                                                                    var options = {
-                                                                                                        filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-                                                                                                        filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token={{ csrf_token() }}',
-                                                                                                        filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-                                                                                                        filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token={{ csrf_token() }}'
-                                                                                                    };
-                                                                                                </script>
-                                                                                                <script>
-                                                                                                    CKEDITOR.replace('editor1', options);
-                                                                                                    //Initialize Select2 Elements
-                                                                                                    $('.select2').select2();
+                                                                                            <script>
+                                                                                                var options = {
+                                                                                                    filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+                                                                                                    filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token={{ csrf_token() }}',
+                                                                                                    filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+                                                                                                    filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token={{ csrf_token() }}'
+                                                                                                };
+                                                                                            </script>
+                                                                                            <script>
+                                                                                                CKEDITOR.replace('editor1', options);
+                                                                                                //Initialize Select2 Elements
+                                                                                                $('.select2').select2();
 
-                                                                                                    //Save Draft
-                                                                                                    $('#draft-btn').click(function(e) {
-                                                                                                        e.preventDefault();
-                                                                                                        $('#status_site_update').val(0);
-                                                                                                        $('#post-form').submit();
+                                                                                                //Save Draft
+                                                                                                $('#draft-btn').click(function(e) {
+                                                                                                    e.preventDefault();
+                                                                                                    $('#status_site_update').val(0);
+                                                                                                    $('#post-form').submit();
+                                                                                                });
+                                                                                                //Save Publish
+                                                                                                $('#publish-btn').click(function(e) {
+                                                                                                    e.preventDefault();
+                                                                                                    $('#status_site_update').val(1);
+                                                                                                    $('#fresh_site').val(1);
+                                                                                                    $('#post-form').submit();
+                                                                                                });
+
+                                                                                                //flash message
+                                                                                                @if (session()->has('success'))
+                                                                                                swal("SUCCESS!", "{{ session('success') }}", "success");
+                                                                                                @elseif (session()->has('error'))
+                                                                                                swal("SUCCESS!", "{{ session('error') }}", "error");
+                                                                                                @endif
+                                                                                                // Get relevant element
+                                                                                                checkBox = document.getElementById('radio_static');
+                                                                                                // Check if the element is selected/checked
+                                                                                                if (checkBox.checked) {
+                                                                                                    // Respond to the result
+                                                                                                    // $("#link_hero").show();
+                                                                                                    // $("#hero_slider").hide();
+                                                                                                    $('#radio_slider').change(function() {
+                                                                                                        $("#hero_slider").show();
+                                                                                                        // $("#link_hero").hide();
                                                                                                     });
-                                                                                                    //Save Publish
-                                                                                                    $('#publish-btn').click(function(e) {
-                                                                                                        e.preventDefault();
-                                                                                                        $('#status_site_update').val(1);
-                                                                                                        $('#fresh_site').val(1);
-                                                                                                        $('#post-form').submit();
-                                                                                                    });
-
-                                                                                                    //flash message
-                                                                                                    @if (session()->has('success'))
-                                                                                                    swal("SUCCESS!", "{{ session('success') }}", "success");
-                                                                                                    @elseif (session()->has('error'))
-                                                                                                    swal("SUCCESS!", "{{ session('error') }}", "error");
-                                                                                                    @endif
-                                                                                                    // Get relevant element
-                                                                                                    checkBox = document.getElementById('radio_static');
-                                                                                                    // Check if the element is selected/checked
-                                                                                                    if (checkBox.checked) {
-                                                                                                        // Respond to the result
+                                                                                                    $('#radio_static').change(function() {
+                                                                                                        $("#hero_slider").hide();
                                                                                                         // $("#link_hero").show();
-                                                                                                        // $("#hero_slider").hide();
-                                                                                                        $('#radio_slider').change(function() {
-                                                                                                            $("#hero_slider").show();
-                                                                                                            // $("#link_hero").hide();
-                                                                                                        });
-                                                                                                        $('#radio_static').change(function() {
-                                                                                                            $("#hero_slider").hide();
-                                                                                                            // $("#link_hero").show();
-                                                                                                        });
-                                                                                                    }
-                                                                                                    checkBox = document.getElementById('radio_slider');
-                                                                                                    // Check if the element is selected/checked
-                                                                                                    if (checkBox.checked) {
-                                                                                                        // Respond to the result
+                                                                                                    });
+                                                                                                }
+                                                                                                checkBox = document.getElementById('radio_slider');
+                                                                                                // Check if the element is selected/checked
+                                                                                                if (checkBox.checked) {
+                                                                                                    // Respond to the result
+                                                                                                    // $("#link_hero").hide();
+                                                                                                    $("#hero_slider").show();
+                                                                                                    $('#radio_slider').change(function() {
                                                                                                         // $("#link_hero").hide();
                                                                                                         $("#hero_slider").show();
-                                                                                                        $('#radio_slider').change(function() {
-                                                                                                            // $("#link_hero").hide();
-                                                                                                            $("#hero_slider").show();
-                                                                                                        });
-                                                                                                        $('#radio_static').change(function() {
-                                                                                                            // $("#hero_slider").hide();
-                                                                                                            $("#link_hero").show();
-                                                                                                        });
-                                                                                                    }
-                                                                                                </script>
-                                                                                                @endpush
-                                                                                                @endsection
+                                                                                                    });
+                                                                                                    $('#radio_static').change(function() {
+                                                                                                        // $("#hero_slider").hide();
+                                                                                                        $("#link_hero").show();
+                                                                                                    });
+                                                                                                }
+                                                                                            </script>
+                                                                                            @endpush
+                                                                                            @endsection

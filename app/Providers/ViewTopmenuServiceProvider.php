@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use NguyenHuy\Menu\Facades\Menu;
+use NguyenHuy\Menu\Models\Menus;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
