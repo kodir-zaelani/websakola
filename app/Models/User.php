@@ -120,6 +120,15 @@ class User extends Authenticatable
     {
         return $this->hasMany(Post::class, 'author_id');
     }
+ /**
+  * Get all of the posts for the User
+  *
+  * @return \Illuminate\Database\Eloquent\Relations\HasMany
+  */
+     public function blogs(): HasMany
+    {
+        return $this->hasMany(Blog::class, 'author_id');
+    }
 
     public function editorials(): HasMany
     {
